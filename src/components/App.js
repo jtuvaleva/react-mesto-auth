@@ -14,7 +14,7 @@ import React, { useEffect, useState } from 'react';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import {api} from '../utils/api.js';
 import {escKey} from '../utils/constant.js';
-import * as auth from '../auth'
+import * as auth from '../utils/auth'
 import {Route, Switch, useHistory, Redirect } from 'react-router-dom';
 import LoadingSpinner from './LoadingSpinner'
 
@@ -211,8 +211,7 @@ function App () {
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
-        <Header isSuccess={isSuccess}
-                loggedIn={loggedIn}
+        <Header loggedIn={loggedIn}
                 userEmail={userEmail}
                 handleLogout={handleLogout}/>
 
@@ -226,7 +225,7 @@ function App () {
           </Route>
           
 
-          <ProtectedRoute path="/"
+          <ProtectedRoute exact path="/"
                 cards={cardsList}
                 onEditAvatar={handleEditAvatarClick}
                 onEditProfile={handleEditProfileClick}

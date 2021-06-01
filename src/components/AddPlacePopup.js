@@ -3,19 +3,29 @@ import PopupWithForm from './PopupWithForm'
 
 
 function AddPlacePopup ({isOpen, onClose, onAddPlace}) {
-    const cardLinkRef = React.useRef();
-    const cardNameRef = React.useRef();
+    const [cardData, setCardData] = React.useState({
+      name: '',
+      link: '',
+    })
+  
+    function handleChange(e) {
+      const {name, value} = e.target;
+      setCardData({
+        ...cardData,
+        [name]:value
+      })
+    }
 
     function clearInputLink() {
-        cardLinkRef.current.value = '';
-        cardNameRef.current.value = '';
+      cardData.name = '';
+      cardData.link = '';
     }
 
     function handleSubmit(e) {
         e.preventDefault();
         onAddPlace({
-          name: cardNameRef.current.value, 
-          link: cardLinkRef.current.value, 
+          name: cardData.name, 
+          link: cardData.link, 
         });
         clearInputLink();
     }
@@ -27,12 +37,14 @@ function AddPlacePopup ({isOpen, onClose, onAddPlace}) {
                       onSubmit={handleSubmit}
                       buttonText='Создать'>
 
-            <input ref={cardNameRef} type="text" placeholder="Название" id="cardName" name="name" 
+          <input type="text" placeholder="Название" id="cardName" name="name" 
             className="popup__form-input popup__form-input_field_image-name" 
-            required minLength="2" maxLength="30"/>
+            required minLength="2" maxLength="30"
+            value={cardData.name} onChange={handleChange}/>
           <span className="popup__form-error cardName-error"></span>
-          <input ref={cardLinkRef} type="url" placeholder="Ссылка на картинку" id="cardLink" name="link" 
-            className="popup__form-input popup__form-input_field_image-src" required/>
+          <input required type="url" placeholder="Ссылка на картинку" id="cardLink" name="link" 
+            className="popup__form-input popup__form-input_field_image-src"
+            value={cardData.link} onChange={handleChange}/>
           <span className="popup__form-error cardLink-error"></span>
         </PopupWithForm>
     );
