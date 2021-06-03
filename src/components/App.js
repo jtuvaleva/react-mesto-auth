@@ -33,6 +33,7 @@ function App () {
   const [isSuccess, setIsSuccess] = useState(false);
   const history = useHistory();
   const [userEmail, setUserEmail] = useState(null);
+  const [isBurgerOpened, setIsBurgerOpened] = React.useState(false);
 
   useEffect(()=>{
     api.getProfileInfo()
@@ -202,6 +203,7 @@ function App () {
   function handleLogout(e) {
     setUserEmail(null);
     setLoggedIn(false);
+    setIsBurgerOpened(false);
     localStorage.removeItem('jwt');
   }
 
@@ -209,11 +211,26 @@ function App () {
     return <LoadingSpinner/>
   }
 
+  function handleBurger(e){
+    
+    const burgerBtn = e.target.parentElement;
+    
+    if(!isBurgerOpened) {
+      burgerBtn.classList.add('header__burger_open');
+      setIsBurgerOpened(true)
+    } else {
+      burgerBtn.classList.remove('header__burger_open');
+      setIsBurgerOpened(false);
+    }
+  }
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
         <Header loggedIn={loggedIn}
                 userEmail={userEmail}
-                handleLogout={handleLogout}/>
+                handleLogout={handleLogout}
+                handleBurger={handleBurger}
+                isBurgerOpened={isBurgerOpened}/>
 
         <Switch>
           <Route path="/signup">

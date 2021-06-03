@@ -12,7 +12,18 @@
 }
 
 
-@media all and (max-width: 767px) {
+@media (min-width: 515px) and (max-width: 767px) {
+  .profile__name {
+    font-size: 27px;
+    line-height: 33px;
+    max-width: 67.5%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+
+@media all and (max-width: 515px) {
   .profile__name {
     font-size: 27px;
     line-height: 33px;
@@ -20,3 +31,4 @@
     margin-left: auto;
   }
 }
+

@@ -11,3 +11,11 @@
     visibility: visible;
     opacity: 0.6;
  }
+
+
+ @media all and (max-width: 515px) {
+    .profile__photo-area {
+      display: block;
+      margin: 0 auto;
+    }
+  }

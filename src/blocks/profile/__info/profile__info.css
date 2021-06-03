@@ -17,3 +17,18 @@
     min-width: 282px;
   }
 }
+
+@media (min-width: 515px) and (max-width: 767px) {
+  .profile__info {
+    margin-left: 10px;
+    margin-right: auto;
+  }
+}
+
+
+@media all and (max-width: 515px) {
+  .profile__info {
+    margin: 26px auto 0;
+    min-width: 282px;
+  }
+}
