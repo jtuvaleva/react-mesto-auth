@@ -6,7 +6,7 @@
 
 **Макет проекта**
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1)
+[Ссылка на макет в Figma](https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1)
 
 **Обновления**
 * Использован React с функциональными компонентами
@@ -19,4 +19,4 @@
 * Реализована работа с локальным хранилищем и токеном
 
 
-* [Ссылка на проект](https://jtuvaleva.github.io/react-mesto-auth/)
+[Ссылка на проект](https://jtuvaleva.github.io/react-mesto-auth/)
