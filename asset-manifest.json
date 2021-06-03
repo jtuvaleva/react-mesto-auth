@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.764b80d7.chunk.css",
+    "main.css": "./static/css/main.22e73fd1.chunk.css",
     "main.js": "./static/js/main.52cc9152.chunk.js",
     "main.js.map": "./static/js/main.52cc9152.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.f1c60c72.js",
@@ -10,7 +10,7 @@
     "static/js/3.e4722ff4.chunk.js": "./static/js/3.e4722ff4.chunk.js",
     "static/js/3.e4722ff4.chunk.js.map": "./static/js/3.e4722ff4.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.764b80d7.chunk.css.map": "./static/css/main.764b80d7.chunk.css.map",
+    "static/css/main.22e73fd1.chunk.css.map": "./static/css/main.22e73fd1.chunk.css.map",
     "static/js/2.ae0519f2.chunk.js.LICENSE.txt": "./static/js/2.ae0519f2.chunk.js.LICENSE.txt",
     "static/media/index.css": "./static/media/trash_button.a274c87c.svg",
     "static/media/spinner.63894ea4.gif": "./static/media/spinner.63894ea4.gif"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.f1c60c72.js",
     "static/js/2.ae0519f2.chunk.js",
-    "static/css/main.764b80d7.chunk.css",
+    "static/css/main.22e73fd1.chunk.css",
     "static/js/main.52cc9152.chunk.js"
   ]
 }
